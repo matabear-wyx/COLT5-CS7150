@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Your Project Name</title>
-<meta property="og:title" content=Your Project Name" />
-<meta name="twitter:title" content="Your Project Name" />
-<meta name="description" content="Your project about your cool topic described right here." />
-<meta property="og:description" content="Your project about your cool topic described right here." />
-<meta name="twitter:description" content="Your project about your cool topic described right here." />
+<title>COLT5 for CS7150</title>
+<meta property="og:title" content="COLT5 for CS7150" />
+<meta name="twitter:title" content="COLT5 for CS7150" />
+<meta name="description" content="CS 7150 Report for COLT5: Faster Long-Range Transformers with Conditional Computation" />
+<meta property="og:description" content="CS 7150 Report for COLT5: Faster Long-Range Transformers with Conditional Computation" />
+<meta name="twitter:description" content="CS 7150 Report for COLT5: Faster Long-Range Transformers with Conditional Computation" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -22,7 +22,7 @@
 <div class="nd-pageheader">
  <div class="container">
  <h1 class="lead">
- <nobr class="widenobr">Your Project Name</nobr>
+ <nobr class="widenobr">COLT5</nobr>
  <nobr class="widenobr">For CS 7150</nobr>
  </h1>
  </div>
@@ -31,8 +31,12 @@
 <div class="container">
 <div class="row">
 <div class="col justify-content-center text-center">
-<h2>An Analysis of [papername]</h2>
-<p>Describe the paper and the big question about it that interests you.</p>
+<h2>An Analysis of COLT5: Faster Long-Range Transformers with Conditional Computation</h2>
+    <p>Optimizing Transformer models for long context windows has always been a problem. In the original transformer decoder implementation, to generate a sequence of length N, the time and memory complexity is respectively O(n<sup>2</sup>) and O(n). In this work, the authors proposed a way to optimize the coefficient of the n<sup>2</sup> term, from 2 to 1/84.</p>
+    <img src="./imgs/figure1.png" alt="Figure 1" >
+    <p>The optimization is done with a “routing” layer: by adding a “light” attention and mlp alongside the original “heavy” attention and mlp, the model can use more computation power on the important tokens, and use less computational power on unimportant tokens. The authors trained a model with a 64k context window, yielding higher performance (F1 score) in less inference time than LongT5 on the NarrativeQA dataset.</p>
+    <img src="./imgs/figure2.png" alt="Figure 2" >
+    <p>This method also improves the interpretability of the Transformer model. The routing score can be used as an importance score of the token.</p>
 </div>
 </div>
 <div class="row">
@@ -56,7 +60,7 @@
 
 <h2>Team Members</h2>
                                                    
-<p>Make sure to list here is who is on the team.</p>
+<p>Yuxiong WU & Yuxuan LU</p>
 
   
 </div><!--col-->

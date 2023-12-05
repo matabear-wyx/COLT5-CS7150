@@ -42,13 +42,166 @@
 <div class="row">
 <div class="col">
 
-<h2>Literature Review; Biography; Social Impact; Industry Applications; Follow-on Research; and Peer-Review</h2>
-
-<p>Just as we have done in the role-playing exercise, analyze the paper from all perspectives.
-</p>
-
 <p>Optionally, in addition to a reading-based analysis, implement the ideas of the paper in code, and report on your findings.
 </p>
+
+<div class="container">
+  <h2>Biography</h2>
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Joshua.png" alt="Joshua Ainslie">
+        <div class="card-body">
+          <h5 class="card-title">Joshua Ainslie</h5>
+          <p class="card-text">MS in Statistic at Stanford; Software Engineer at Google</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Tao.jpg" alt="Tao Lei">
+        <div class="card-body">
+          <h5 class="card-title">Tao Lei</h5>
+          <p class="card-text">PhD at MIT, Research scientist at Google Brain</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Michiel.jpg" alt="Michiel de Jong">
+        <div class="card-body">
+          <h5 class="card-title">Michiel de Jong</h5>
+          <p class="card-text">PhD at USC; Research Scientist at Stealth Startup; Former Googler</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Santiago.jpg" alt="Santiago Ontañón">
+        <div class="card-body">
+          <h5 class="card-title">Santiago Ontañón</h5>
+          <p class="card-text">PhD at Autonomous University of Barcelona; Associate Professor at Drexel University</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Siddhartha.jpg" alt="Siddhartha Brahma">
+        <div class="card-body">
+          <h5 class="card-title">Siddhartha Brahma</h5>
+          <p class="card-text">PhD at EPFL; Research Scientist at Google Deepmind</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Yury.png" alt="Yury Zemlyanskiy">
+        <div class="card-body">
+          <h5 class="card-title">Yury Zemlyanskiy</h5>
+          <p class="card-text">PhD student at USC</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/David.jpg" alt="David Uthus">
+        <div class="card-body">
+          <h5 class="card-title">David Uthus</h5>
+          <p class="card-text">PhD at The University of Auckland, Software Engineer at Google</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Guo.jpg" alt="Mandy Guo">
+        <div class="card-body">
+          <h5 class="card-title">Mandy Guo</h5>
+          <p class="card-text">BS at Cornell, Software Engineer at Google</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/James.jpg" alt="James Lee-Thorp">
+        <div class="card-body">
+          <h5 class="card-title">James Lee-Thorp</h5>
+          <p class="card-text">Google Researcher</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Yi.jpg" alt="Yi Tay">
+        <div class="card-body">
+          <h5 class="card-title">Yi Tay</h5>
+          <p class="card-text">Senior Research Scientist at Google Brain</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Sung.jpg" alt="Yun-Hsuan Sung">
+        <div class="card-body">
+          <h5 class="card-title">Yun-Hsuan Sung</h5>
+          <p class="card-text">PhD at Stanford; Senior Research Scientist at Google</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="./imgs/Sumit.jpg" alt="Sumit Sanghai">
+        <div class="card-body">
+          <h5 class="card-title">Sumit Sanghai</h5>
+          <p class="card-text">Software Engineer at Google</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Academic Impact</h2>
+  <p>This work enables a new research question: optimizing the transformer at a token level. This work assumes that each token has a different importance in the sequence, so they can allocate less computational power to the less important token, thus reducing overall time complexity. Another interesting research question is, can we add more computation power to a specific token? (Think before you speak: Training Language Models With Pause Tokens) studied this method, and reported a significant performance gain when allowing more computation of the important output tokens.
+  </p>
+</div>
+
+<div class="container">
+  <h2>Industry Impact</h2>
+  <p>The cost of running LLMs is a huge burden to be deployed everywhere. For example, the “new bing” chatbot has multiple versions of model sizes, and they have a small “router” in front of all incoming requests to tell the “difficulty” of the question. However, the performance of this router is very bad, so you’ll often see new bing replies silly responses for tricky questions.
+  </p>
+  <p>So, optimizing LLMs for longer contexts and fewer computations can help the industry a lot.
+  </p>
+</div>
+
+<div class="container">
+  <h2>Review from Yuxiong Wu</h2>
+  <p>Score: 8/10 (Strong Accept)
+  </p>
+  <p>Pros:
+  </p>
+  <p>Innovation: Implements a conditional computation mechanism for efficient processing of long texts.
+  </p>
+  <p>Efficiency: Significantly improves training and inference speed, especially with extremely long inputs.
+  </p>
+  <p>Scalability: Effectively handles long inputs up to 64k tokens.
+  </p>
+  <p>Few-Shot Learning Capabilities: Performs well in few-shot learning tasks.
+  </p>
+  <p>Cons:
+  </p>
+  <p>Limited to Encoder: Conditional computation is only applied to the encoder, not suitable for token-by-token generation in decoders.
+  </p>
+  <p>Specialization & Adaptability: Primarily designed for long sequences, might not be suitable for short sequences or require training from scratch.
+  </p>
+  <p>Decoder Integration: No exploration of how to integrate this model with decoders, limiting its application in decoder-only models.
+  </p>
+</div>
+
+<div class="container">
+  <h2>Review from Yuxuan Lu</h2>
+  <p>Score: /10
+  </p>
+</div>
 
 <h3>References</h3>
 

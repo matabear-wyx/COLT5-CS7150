@@ -34,7 +34,7 @@
 <h2>An Analysis of COLT5: Faster Long-Range Transformers with Conditional Computation</h2>
     <p>Optimizing Transformer models for long context windows has always been a problem. In the original transformer decoder implementation, to generate a sequence of length N, the time and memory complexity is respectively O(n<sup>2</sup>) and O(n). In this work, the authors proposed a way to optimize the coefficient of the n<sup>2</sup> term, from 2 to 1/84.</p>
     <img src="./imgs/figure1.png" alt="Figure 1" >
-    <p>The optimization is done with a “routing” layer: by adding a “light” attention and mlp alongside the original “heavy” attention and mlp, the model can use more computation power on the important tokens, and use less computational power on unimportant tokens. The authors trained a model with a 64k context window, yielding higher performance (F1 score) in less inference time than LongT5 on the NarrativeQA dataset.</p>
+    <p>The optimization is done with a "routing" layer: by adding a "light" attention and mlp alongside the original "heavy" attention and mlp, the model can use more computation power on the important tokens, and use less computational power on unimportant tokens. The authors trained a model with a 64k context window, yielding higher performance (F1 score) in less inference time than LongT5 on the NarrativeQA dataset.</p>
     <img src="./imgs/figure2.png" alt="Figure 2" >
     <p>This method also improves the interpretability of the Transformer model. The routing score can be used as an importance score of the token.</p>
 </div>
@@ -167,7 +167,7 @@
 
 <div class="container">
   <h2>Industry Impact</h2>
-  <p>The cost of running LLMs is a huge burden to be deployed everywhere. For example, the “new bing” chatbot has multiple versions of model sizes, and they have a small “router” in front of all incoming requests to tell the “difficulty” of the question. However, the performance of this router is very bad, so you’ll often see new bing replies silly responses for tricky questions.
+  <p>The cost of running LLMs is a huge burden to be deployed everywhere. For example, the "new bing" chatbot has multiple versions of model sizes, and they have a small "router" in front of all incoming requests to tell the "difficulty" of the question. However, the performance of this router is very bad, so you’ll often see new bing replies silly responses for tricky questions.
   </p>
   <p>So, optimizing LLMs for longer contexts and fewer computations can help the industry a lot.
   </p>

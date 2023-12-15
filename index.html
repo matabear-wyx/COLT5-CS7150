@@ -42,8 +42,26 @@
 <div class="row">
 <div class="col">
 
-<p>Optionally, in addition to a reading-based analysis, implement the ideas of the paper in code, and report on your findings.
-</p>
+<div class="container">
+<div class="row">
+<div class="col justify-content-center text-center">
+<h2>Literature Review</h2>
+    <p>Efficient Streaming Language Models with Attention Sinks(2023):
+    </p>
+    <p>Deploying Large Language Models (LLMs) in streaming applications such as multi-round dialogue, where long interactions are expected, is urgently needed but poses two major challenges. Firstly, during the decoding stage, caching previous tokens' Key and Value states (KV) consumes extensive memory. Secondly, popular LLMs cannot generalize to longer texts than the training sequence length. Window attention, where only the most recent KVs are cached, is a natural approach -- but we show that it fails when the text length surpasses the cache size. We observe an interesting phenomenon, namely attention sink, that keeping the KV of initial tokens will largely recover the performance of window attention. In this paper, we first demonstrate that the emergence of attention sink is due to the strong attention scores towards initial tokens as a ``sink'' even if they are not semantically important. Based on the above analysis, we introduce StreamingLLM, an efficient framework that enables LLMs trained with a finite length attention window to generalize to infinite sequence lengths without any fine-tuning. We show that StreamingLLM can enable Llama-2, MPT, Falcon, and Pythia to perform stable and efficient language modeling with up to 4 million tokens and more. In addition, we discover that adding a placeholder token as a dedicated attention sink during pre-training can further improve streaming deployment. In streaming settings, StreamingLLM outperforms the sliding window recomputation baseline by up to 22.2x speedup.
+    </p>
+    <p>Think before you speak: Training Language Models With Pause Tokens(2023):
+    </p>
+    <p>Language models generate responses by producing a series of tokens in immediate succession: the (K+1)th token is an outcome of manipulating K hidden vectors per layer, one vector per preceding token. What if instead we were to let the model manipulate say, K+10 hidden vectors, before it outputs the (K+1)th token? We operationalize this idea by performing training and inference on language models with a (learnable) pause token, a sequence of which is appended to the input prefix. We then delay extracting the model's outputs until the last pause token is seen, thereby allowing the model to process extra computation before committing to an answer. We empirically evaluate pause-training on decoder-only models of 1B and 130M parameters with causal pretraining on C4, and on downstream tasks covering reasoning, question-answering, general understanding and fact recall. Our main finding is that inference-time delays show gains when the model is both pre-trained and finetuned with delays. For the 1B model, we witness gains on 8 of 9 tasks, most prominently, a gain of 18% EM score on the QA task of SQuAD, 8% on CommonSenseQA and 1% accuracy on the reasoning task of GSM8k. Our work raises a range of conceptual and practical future research questions on making delayed next-token prediction a widely applicable new paradigm.
+    </p>
+    <p>Longformer: The Long-Document Transformer(2020):
+    </p>
+    <p>Transformer-based models are unable to process long sequences due to their self-attention operation, which scales quadratically with the sequence length. To address this limitation, we introduce the Longformer with an attention mechanism that scales linearly with sequence length, making it easy to process documents of thousands of tokens or longer. Longformer's attention mechanism is a drop-in replacement for the standard self-attention and combines a local windowed attention with a task motivated global attention. Following prior work on long-sequence transformers, we evaluate Longformer on character-level language modeling and achieve state-of-the-art results on text8 and enwik8. In contrast to most prior work, we also pretrain Longformer and finetune it on a variety of downstream tasks. Our pretrained Longformer consistently outperforms RoBERTa on long document tasks and sets new state-of-the-art results on WikiHop and TriviaQA. We finally introduce the Longformer-Encoder-Decoder (LED), a Longformer variant for supporting long document generative sequence-to-sequence tasks, and demonstrate its effectiveness on the arXiv summarization dataset.
+    </p>
+</div>
+</div>
+<div class="row">
+<div class="col">
 
 <div class="container">
   <h2>Biography</h2>
@@ -167,7 +185,7 @@
 
 <div class="container">
   <h2>Industry Impact</h2>
-  <p>The cost of running LLMs is a huge burden to be deployed everywhere. For example, the "new bing" chatbot has multiple versions of model sizes, and they have a small "router" in front of all incoming requests to tell the "difficulty" of the question. However, the performance of this router is very bad, so you’ll often see new bing replies silly responses for tricky questions.
+  <p>The cost of running LLMs is a huge burden to be deployed everywhere. For example, the "new bing" chatbot has multiple versions of model sizes, and they have a small "router" in front of all incoming requests to tell the "difficulty" of the question. However, the performance of this router is very bad, so you'll often see new bing replies silly responses for tricky questions.
   </p>
   <p>So, optimizing LLMs for longer contexts and fewer computations can help the industry a lot.
   </p>
@@ -217,10 +235,22 @@
 
 <h3>References</h3>
 
-<p><a name="bottou-1990">[1]</a> <a href="https://papers.baulab.info/Bottou-1990.pdf"
-  >L&eacute;on Bottou and Patrick Gallinari.
-  <em>A framework for the cooperation of learning algorithms.</em></a>
-  Advances in neural information processing systems 3 (1990).
+<p><a name="Training Language Models With Pause Tokens">[1]</a> <a href="https://arxiv.org/pdf/2310.02226.pdf"
+  >Sachin Goyal, Ziwei Ji, Ankit Singh Rawat, Aditya Krishna Menon, Sanjiv Kumar, Vaishnavh Nagarajan.
+  <em>Think before you speak: Training Language Models With Pause Tokens.</em></a>
+  ICLR 2024
+</p>
+
+<p><a name="Efficient Streaming Language Models with Attention Sinks">[1]</a> <a href="https://arxiv.org/pdf/2309.17453.pdf"
+  >Guangxuan Xiao, Yuandong Tian, Beidi Chen, Song Han, Mike Lewis.
+  <em>Efficient Streaming Language Models with Attention Sinks.</em></a>
+  ICLR 2024
+</p>
+
+<p><a name="Longformer: The Long-Document Transformer">[1]</a> <a href="https://arxiv.org/pdf/2004.05150.pdf"
+  >Iz Beltagy, Matthew E. Peters, Arman Cohan.
+  <em>Longformer: The Long-Document Transformer.</em></a>
+  2020
 </p>
 
 <h2>Team Members</h2>
